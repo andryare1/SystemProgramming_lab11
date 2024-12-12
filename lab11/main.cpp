@@ -1,14 +1,29 @@
-//
-//  main.cpp
-//  lab11
-//
-//  Created by Андрей Ярема on 12.12.2024.
-//
-
 #include <iostream>
+#include "Energy.hpp"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+using namespace std;
+int main() {
+    // Создание объекта Joule с 1 ТДж (1e12 Дж)
+    Joule j(500); // 1 ТДж
+
+    miJoule mj(j);           // Преобразование через конструктор
+    kJoule kj(j);            // Преобразование через конструктор
+    MJoule Mj = MJoule(j);   // Преобразование через оператор
+    GJoule gj = GJoule(j);   // Преобразование через оператор
+    TJoule tj = (TJoule)j;   // Преобразование через оператор
+
+
+    // Вывод значений для каждого класса
+    cout << "Джоули: " << j.getValue() << " Дж\n";
+    cout << "МиллиДжоули: " << mj.getValue() << " мДж\n";
+    cout << "КилоДжоули: " << kj.getValue() << " кДж\n";
+    cout << "МегаДжоули: " << Mj.getValue() << " МДж\n";
+    cout << "ГигаДжоули: " << gj.getValue() << " ГДж\n";
+    cout << "ТераДжоули: " << tj.getValue() << " ТДж\n";
+
+    int q;
+    
+    cin >> q;
+
     return 0;
 }
