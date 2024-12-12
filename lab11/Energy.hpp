@@ -1,4 +1,11 @@
 
+class miJoule;
+class Joule;
+class GJoule;
+class MJoule;
+class TJoule;
+class kJoule;
+
 // === Коэффициенты перевода ===
 constexpr double MILLI = 1e-3; // мДж → Дж
 constexpr double KILO = 1e3;   // кДж → Дж
